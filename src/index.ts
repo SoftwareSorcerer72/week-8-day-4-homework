@@ -88,6 +88,9 @@ class User {
     set cart(value: Vehicle[]) {
         this._cart = value;
     }
+    addToCart(item: Vehicle): void {
+        this._cart.push(item);
+    }
 }
 //User class end
 
@@ -112,9 +115,7 @@ function createItem(name: string, price: number, description: string): vehicle {
 
 
 
-function addToCart(user: user, item: vehicle): void {
-    user.cart.push(item);
-}
+
 
 
 function removeFromCart(user: user, itemId: string): void {
