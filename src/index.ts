@@ -145,9 +145,9 @@ let user = new User("Mike Welborn", 33);
 
 // Add items from the shop to the user's cart
 let shopItems = shop.items;
-user.addToCart(shopItems[0]); // Add the first item from the shop
-user.addToCart(shopItems[1]); // Add the second item from the shop
-user.addToCart(shopItems[2]); // Add the third item from the shop
+user.addToCart(shopItems[0]); 
+user.addToCart(shopItems[1]); 
+user.addToCart(shopItems[2]); 
 
 // Print the cart
 user.printCart();
