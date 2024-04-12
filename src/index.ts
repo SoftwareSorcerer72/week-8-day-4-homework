@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
-//Vehicle Start
+//Vehicle class Start
 class Vehicle {
     private _id: string;
     private _name: string;
@@ -45,15 +45,51 @@ class Vehicle {
         this._description = value;
     }
 }
-//Vehicle end
+//Vehicle class end
 
-type user = {
-    id: string;
-    name: string;
-    age: number;
-    cart: (vehicle)[];
+//User class start
+class User {
+    private _id: string;
+    private _name: string;
+    private _age: number;
+    private _cart: Vehicle[];
+
+    constructor(name: string, age: number) {
+        this._id = uuidv4();
+        this._name = name;
+        this._age = age;
+        this._cart = [];
+    }
+
+    get id(): string {
+        return this._id;
+    }
+
+    get name(): string {
+        return this._name;
+    }
+
+    set name(value: string) {
+        this._name = value;
+    }
+
+    get age(): number {
+        return this._age;
+    }
+
+    set age(value: number) {
+        this._age = value;
+    }
+
+    get cart(): Vehicle[] {
+        return this._cart;
+    }
+
+    set cart(value: Vehicle[]) {
+        this._cart = value;
+    }
 }
-
+//User class end
 
 function createUser(name: string, age: number): user {
   return {
