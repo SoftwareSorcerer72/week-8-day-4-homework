@@ -91,6 +91,9 @@ class User {
     addToCart(item: Vehicle): void {
         this._cart.push(item);
     }
+    removeFromCart(itemId: string): void {
+        this._cart = this._cart.filter(item => item.id !== itemId);
+    }
 }
 //User class end
 
